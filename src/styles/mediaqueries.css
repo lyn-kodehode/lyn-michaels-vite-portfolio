@@ -249,11 +249,47 @@
     aspect-ratio: 3/4;
     flex-shrink: 0;
   }
-  .about-me-texts {
+  /* .about-me-texts {
     width: 90%;
     height: 320px;
     flex-shrink: 0;
     overflow-y: auto;
+  } */
+
+  .about-me-texts {
+    width: 90%;
+    height: 300px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--lightmode-primary-font-color) transparent;
+  }
+  .about-me-texts::-webkit-scrollbar {
+    width: 3px;
+  }
+  .about-me-texts::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+  }
+  .about-me-texts::-webkit-scrollbar-thumb {
+    background: var(--lightmode-primary-font-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  .about-me-texts::-webkit-scrollbar-thumb:hover {
+    background: var(--lightmode-primary-font-color-hover);
+  }
+  /* Dark mode scrollbar for mobile */
+  .dark-mode .about-me-texts {
+    scrollbar-color: var(--darkmode-primary-font-color) transparent;
+  }
+
+  .dark-mode .about-me-texts::-webkit-scrollbar-thumb {
+    background: var(--darkmode-primary-font-color);
+  }
+
+  .dark-mode .about-me-texts::-webkit-scrollbar-thumb:hover {
+    background: var(--darkmode-primary-font-color-hover);
   }
   /* Projects */
   /* .projects-contents {
