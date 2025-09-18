@@ -30,7 +30,9 @@
     gap: 0.3rem;
     flex-shrink: 0;
   }
-
+  .hamburger-links-container a {
+    font-size: 1.2rem;
+  }
   .control-btn {
     padding: 0.3rem 0.6rem;
     font-size: 0.8rem;
@@ -58,11 +60,11 @@
     text-align: center;
   }
   .hero-text-p1 {
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: center;
   }
   .hero-text-p2 {
-    font-size: 14px;
+    font-size: 0.875rem;
     text-align: center;
   }
   .hero-contents {
@@ -216,11 +218,11 @@
     text-align: center;
   }
   .hero-text-p1 {
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: center;
   }
   .hero-text-p2 {
-    font-size: 14px;
+    font-size: 0.875rem;
     text-align: center;
   }
   .hero-contents {
@@ -339,11 +341,11 @@
     text-align: left;
   }
   .hero-text-p1 {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: left;
   }
   .hero-text-p2 {
-    font-size: 16px;
+    font-size: 1rem;
     text-align: left;
   }
   .hero-contents {
@@ -463,11 +465,11 @@
     text-align: center;
   }
   .hero-text-p1 {
-    font-size: 18px; 
+    font-size: 1.125rem;
     text-align: center;
   }
   .hero-text-p2 {
-    font-size: 14px; 
+    font-size: 0.875rem;
     text-align: center;
   }
   .hero-contents {
@@ -555,10 +557,10 @@
     font-size: 1.8rem; 
   }
   .hero-text-p1 {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .hero-text-p2 {
-    font-size: 11px;
+    font-size: 0.6875rem;
   }
 
   .hero-contents {
