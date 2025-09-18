@@ -230,7 +230,7 @@
   }
 
   /* Hero section */
-  #hero-name {
+  /* #hero-name {
     font-size: 2.5rem;
     text-align: center;
   }
@@ -245,13 +245,17 @@
   .hero-contents {
     transform: translateY(-10%);
     padding: 0 1rem;
-  }
-  .button-container {
+  } */
+  /* .button-container {
     flex-direction: column;
     gap: 0.5rem;
     width: 100%;
     max-width: 300px;
-  }
+  } */
+  /* #download-cv-btn,
+  #contact-btn {
+    width: 100%;
+  } */
 
   /* About section - stack vertically */
   .about-contents {
@@ -335,6 +339,9 @@
   #nav-desktop {
     display: flex;
   }
+  .nav-desktop-links {
+    gap: 1.5vw;
+  }
   #nav-hamburger {
     display: none;
   }
@@ -395,6 +402,9 @@
 
 /* 4. LARGE DESKTOP - 1200px and up */
 @media screen and (min-width: 1200px) {
+  .nav-desktop-links {
+    gap: 2vw;
+  }
   .nav-controls {
     gap: 1rem;
   }

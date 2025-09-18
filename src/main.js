@@ -20,6 +20,12 @@ const heroSection = document.getElementById("hero-section");
 const leftScrollBtn = document.getElementById("scroll-left");
 const rightScrollBtn = document.getElementById("scroll-right");
 const projectsWrapper = document.querySelector(".projects-wrapper");
+const projectsTrack = document.querySelector(".projects-track");
+const computedStyleProjectsTrack = getComputedStyle(projectsTrack);
+const gapProjectsTrack = parseFloat(computedStyleProjectsTrack.gap);
+const projectCardWidth = document.querySelector(".project-card").offsetWidth;
+// const scrollDistance = projectCardWidth + gapProjectsTrack;
+
 const body = document.body;
 
 // --------------------------------------------------------------------------
@@ -50,6 +56,26 @@ window.addEventListener("scroll", () => {
   }
   lastScrollTop = scrollTop;
 });
+
+// intuitive left/right arrow buttons
+const updateScrollButtons = () => {
+  // projectsWrapper.scrollLeft etc
+  const { scrollLeft, scrollWidth, clientWidth } = projectsWrapper;
+
+  // Left button - show if not at the beginning
+  if (scrollLeft <= 0) {
+    leftScrollBtn.classList.add("fade-out");
+  } else {
+    leftScrollBtn.classList.remove("fade-out");
+  }
+
+  // Right button - show if not at the end
+  if (scrollLeft >= scrollWidth - clientWidth) {
+    rightScrollBtn.classList.add("fade-out");
+  } else {
+    rightScrollBtn.classList.remove("fade-out");
+  }
+};
 
 // const updateThemeIcons = () => {
 //   if (themeToggle) {
@@ -146,12 +172,49 @@ window.addEventListener("scroll", () => {
 
 // horizontal scrolling
 leftScrollBtn.addEventListener("click", () => {
+  const screenWidth = window.innerWidth;
+  let scrollDistance;
+
+  if (screenWidth < 768) {
+    scrollDistance = 255;
+  } else {
+    scrollDistance = projectsWrapper.clientWidth * 0.8;
+  }
+
   projectsWrapper.scrollBy({
-    left: -300,
+    // left: -300,
+    // left: -projectCardWidth,
+    left: -scrollDistance,
     behavior: "smooth",
   });
 });
 
 rightScrollBtn.addEventListener("click", () => {
-  projectsWrapper.scrollBy({ left: 300, behavior: "smooth" });
+  const screenWidth = window.innerWidth;
+  let scrollDistance;
+
+  if (screenWidth < 768) {
+    scrollDistance = 255;
+  } else {
+    scrollDistance = projectsWrapper.clientWidth * 0.8;
+  }
+
+  projectsWrapper.scrollBy({
+    // left: 300,
+    // left: projectCardWidth,
+    left: scrollDistance,
+    behavior: "smooth",
+  });
 });
+
+// update arrow visibility buttons on scroll
+projectsWrapper.addEventListener("scroll", updateScrollButtons);
+
+// Update buttons on window resize
+window.addEventListener("resize", updateScrollButtons);
+
+// --------------------------------------------------------------------------
+// INITIAL CALLS
+// --------------------------------------------------------------------------
+// Initial update
+updateScrollButtons();

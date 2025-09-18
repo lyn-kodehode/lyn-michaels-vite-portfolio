@@ -31,6 +31,8 @@ p, other texts
   --lightmode-cv-btn-font-color: #2c2c2c;
   --lightmode-cv-btn-color-hover: #2c2c2c;
   --lightmode-cv-btn-font-color-hover: #f5f5f5;
+  --lightmode-shadow: rgba(0, 0, 0, 0.1);
+  --lightmode-shadow-hover: rgba(0, 0, 0, 0.15);
 
   /**************** DARKMODE COLORS ***************/
   --darkmode-bg-color: #2c2c2c;
@@ -48,6 +50,8 @@ p, other texts
   --darkmode-cv-btn-font-color: #e4e4e4;
   --darkmode-cv-btn-color-hover: #e4e4e4;
   --darkmode-cv-btn-font-color-hover: #2c2c2c;
+  --darkmode-shadow: rgba(0, 0, 0, 0.1);
+  --darkmode-shadow-hover: rgba(0, 0, 0, 0.15);
 }
 * {
   margin: 0;
@@ -80,8 +84,17 @@ p {
   /* width: 158px; */
   /* height: 54px; */
   border-radius: 2rem;
-  /* width: 158px; */
   cursor: pointer;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--lightmode-shadow);
+  border-color: var(--lightmode-primary-font-color);
+}
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px var(--lightmode-shadow);
+  background-color: var(--lightmode-primary-font-color-hover);
 }
 .section-header-container {
   display: flex;
@@ -146,12 +159,27 @@ nav.hidden,
   display: flex;
   list-style: none;
   font-size: 1.5rem;
-  /* font-size: 24px; */
   gap: 3vw;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.nav-desktop-links a:hover {
+  transform: translateY(-1px); /* Slight lift */
+}
+
+/* .nav-desktop-links a:hover::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: var(--lightmode-primary-font-color-hover);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
 li {
   font-weight: var(--roboto-weight-thin);
 }
@@ -163,9 +191,9 @@ a {
 a:hover {
   font-weight: 300;
   color: var(--lightmode-primary-font-color-hover);
-  text-underline-offset: 1.5vh;
-  text-decoration: underline;
-  text-decoration-color: var(--lightmode-primary-font-color-hover);
+  /* text-underline-offset: 1.5vh; */
+  /* text-decoration: underline; */
+  /* text-decoration-color: var(--lightmode-primary-font-color-hover); */
 }
 .logo-initials {
   font-size: 3vh;
@@ -334,6 +362,7 @@ a:hover {
 #download-cv-btn,
 #contact-btn {
   width: 158px;
+  /* width: 100%; */
 }
 #download-cv-btn {
   background-color: var(--lightmode-cv-btn-color);
@@ -470,6 +499,10 @@ a:hover {
   background-color: var(--lightmode-bg-color);
   border: none;
 }
+.scroll-btn.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
 .scroll-btn:hover {
   /* background: var(--lightmode-primary-font-color-hover); */
   color: var(--lightmode-primary-font-color-hover);
@@ -483,8 +516,14 @@ a:hover {
   border-radius: 1.5rem;
   flex-shrink: 0;
   background-color: var(--lightmode-bg-color);
-
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--lightmode-shadow);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--lightmode-shadow-hover);
+  border-color: var(--lightmode-primary-font-color-hover);
 }
 .project-image {
   height: 50%;
@@ -630,6 +669,8 @@ footer {
   --lightmode-cv-btn-font-color: var(--darkmode-cv-btn-font-color);
   --lightmode-cv-btn-color-hover: var(--darkmode-cv-btn-color-hover);
   --lightmode-cv-btn-font-color-hover: var(--darkmode-cv-btn-font-color-hover);
+  --lightmode-shadow: var(--darkmode-shadow);
+  --lightmode-shadow-hover: var(--darkmode-shadow-hover);
 }
 .theme-toggle {
   background: none;
