@@ -131,7 +131,6 @@
   .dark-mode .about-me-texts::-webkit-scrollbar-thumb:hover {
     background: var(--darkmode-primary-font-color-hover);
   }
-
   /* Skills content mobile - stack in column */
   .skills-contents {
     flex-direction: column;
