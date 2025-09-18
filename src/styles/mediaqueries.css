@@ -1,0 +1,546 @@
+/* hamburger menu display switch */
+/* 1200px for hamburger menu to show is optimal */
+
+/* ========================================
+   MOBILE-FIRST RESPONSIVE DESIGN
+   ======================================== */
+
+/* 1. MOBILE STYLES  */
+@media screen and (max-width: 767px) {
+  #nav-desktop {
+    display: none;
+  }
+  #nav-hamburger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--lightmode-bg-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    padding: 0 0.5rem;
+  }
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+  }
+
+  .control-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hamburger-icon {
+    height: 24px;
+    width: 30px;
+    margin-left: 0.5rem;
+  }
+
+  .logo-initials {
+    flex-shrink: 0;
+    font-size: 2.5vh;
+  }
+
+  /* Hero section mobile styles */
+  #hero-name {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .hero-text-p1 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .hero-text-p2 {
+    font-size: 14px;
+    text-align: center;
+  }
+  .hero-contents {
+    transform: translateY(-10%);
+    padding: 0 1rem;
+  }
+  .button-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  #download-cv-btn,
+  #contact-btn {
+    width: 100%;
+  }
+
+  /* About section mobile styles */
+  .about-contents {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  .photo-container {
+    width: 90%;
+    height: 300px;
+    background-position: center;
+    aspect-ratio: 3/4;
+    flex-shrink: 0;
+  }
+  .about-me-texts {
+    width: 90%;
+    height: 300px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--lightmode-primary-font-color) transparent;
+  }
+  .about-me-texts::-webkit-scrollbar {
+    width: 3px;
+  }
+  .about-me-texts::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+  }
+  .about-me-texts::-webkit-scrollbar-thumb {
+    background: var(--lightmode-primary-font-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  .about-me-texts::-webkit-scrollbar-thumb:hover {
+    background: var(--lightmode-primary-font-color-hover);
+  }
+  /* Dark mode scrollbar for mobile */
+  .dark-mode .about-me-texts {
+    scrollbar-color: var(--darkmode-primary-font-color) transparent;
+  }
+
+  .dark-mode .about-me-texts::-webkit-scrollbar-thumb {
+    background: var(--darkmode-primary-font-color);
+  }
+
+  .dark-mode .about-me-texts::-webkit-scrollbar-thumb:hover {
+    background: var(--darkmode-primary-font-color-hover);
+  }
+
+  /* Skills content mobile - stack in column */
+  .skills-contents {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 20vh;
+  }
+
+  .skill {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Projects mobile styles */
+  .projects-contents {
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .project-card {
+    width: 280px;
+  }
+  .project-details {
+    padding: 0.5rem;
+  }
+  /* contact mobile style */
+  .contact-contents {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .border-div {
+    display: none;
+  }
+}
+
+/* 2. TABLET STYLES - 768px and up */
+@media screen and (min-width: 768px) {
+  /* Navigation - show hamburger menu */
+  #nav-desktop {
+    display: none;
+  }
+  #nav-hamburger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--lightmode-bg-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    padding: 0 0.5rem;
+  }
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+  }
+  .control-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hamburger-icon {
+    height: 24px;
+    width: 30px;
+    margin-left: 0.5rem;
+  }
+  .logo-initials {
+    flex-shrink: 0;
+    font-size: 2.5vh;
+  }
+
+  /* Hero section */
+  #hero-name {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .hero-text-p1 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .hero-text-p2 {
+    font-size: 14px;
+    text-align: center;
+  }
+  .hero-contents {
+    transform: translateY(-10%);
+    padding: 0 1rem;
+  }
+  .button-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* About section - stack vertically */
+  .about-contents {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    /* gap: 1rem; */
+  }
+  .photo-container {
+    width: 90%;
+    height: 320px;
+    background-position: 50% 40%;
+    aspect-ratio: 3/4;
+    flex-shrink: 0;
+  }
+  .about-me-texts {
+    width: 90%;
+    height: 320px;
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
+  /* Projects */
+  /* .projects-contents {
+    gap: 1rem;
+    padding: 0 1rem;
+  } */
+  /* .project-card {
+    min-width: 250px;
+    padding: 1.5rem;
+  } */
+  /* .scroll-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  } */
+}
+
+/* ========================================
+   DESKTOP RESPONSIVE DESIGN
+   ======================================== */
+
+/* 3. DESKTOP STYLES - 1024px and up */
+@media screen and (min-width: 1024px) {
+  /* Navigation - show desktop menu */
+  #nav-desktop {
+    display: flex;
+  }
+  #nav-hamburger {
+    display: none;
+  }
+  /* About section - side by side */
+  .about-contents {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .photo-container {
+    width: 400px;
+    height: 535px;
+  }
+  .about-me-texts {
+    width: 400px;
+    height: 535px;
+  }
+  /* Hero section - larger text */
+  #hero-name {
+    font-size: 4rem;
+    text-align: left;
+  }
+  .hero-text-p1 {
+    font-size: 24px;
+    text-align: left;
+  }
+  .hero-text-p2 {
+    font-size: 16px;
+    text-align: left;
+  }
+  .hero-contents {
+    transform: translateY(-20%);
+    padding: 0;
+  }
+  .button-container {
+    flex-direction: row;
+    gap: 1rem;
+    width: auto;
+    max-width: none;
+  }
+  /* Projects - larger cards */
+  /* .project-card {
+    min-width: 300px;
+    padding: 1.5rem;
+  } */
+  /* .scroll-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  } */
+
+  /* Logo - larger on desktop */
+  .logo-initials {
+    font-size: 3vh;
+    width: 200px;
+  }
+}
+
+/* 4. LARGE DESKTOP - 1200px and up */
+@media screen and (min-width: 1200px) {
+  .nav-controls {
+    gap: 1rem;
+  }
+  .control-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    min-width: 40px;
+  }
+}
+
+/* ***************** */
+/* @media screen and (max-width: 1200px) {
+  #nav-desktop {
+    display: none;
+  }
+  #nav-hamburger {
+    display: flex;
+    align-items: center;
+    gap: 40vw;
+    height: 10vh;
+  }
+  .nav-controls {
+    gap: 0.5rem;
+  }
+  .control-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    min-width: 35px;
+  }
+} */
+
+/* @media screen and (max-width: 900px) {
+  .photo-container {
+    width: 350px;
+    height: 468px;
+  }
+  .about-me-texts {
+    width: 350px;
+    height: 468px;
+  }
+} */
+
+/* @media screen and (max-width: 768px) {
+  #nav-hamburger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--lightmode-bg-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    padding: 0 0.5rem;
+  }
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+  }
+  .control-btn {
+    padding: 0.3rem 0.6rem; 
+    font-size: 0.8rem;
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hamburger-icon {
+    height: 24px; 
+    width: 30px;
+    margin-left: 0.5rem;
+  }
+
+  .logo-initials {
+    flex-shrink: 0;
+    font-size: 2.5vh;
+  }
+  #hero-name {
+    font-size: 2.5rem; 
+    text-align: center;
+  }
+  .hero-text-p1 {
+    font-size: 18px; 
+    text-align: center;
+  }
+  .hero-text-p2 {
+    font-size: 14px; 
+    text-align: center;
+  }
+  .hero-contents {
+    transform: translateY(-10%);
+    padding: 0 1rem;
+  }
+  .button-container {
+    flex-direction: column; 
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .projects-contents {
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .project-card {
+    min-width: 250px;
+    padding: 1.5rem;
+  }
+  .scroll-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+} */
+
+/* @media screen and (max-width: 700px) {
+  .about-contents {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .photo-container {
+    width: 300px;
+    height: 401px;
+  }
+  .about-me-texts {
+    width: 300px;
+    height: auto;
+  }
+} */
+
+/* @media screen and (max-width: 480px) {
+  #nav-hamburger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .control-btn {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .hamburger-icon {
+    height: 22px;
+    width: 28px;
+  }
+} */
+
+/* @media screen and (max-width: 320px) {
+
+  #nav-hamburger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+  }
+  .logo-initials {
+    font-size: 2vh; 
+    width: 100px;
+  }
+  .control-btn {
+    padding: 0.2rem 0.4rem; 
+    font-size: 0.6rem;
+    min-width: 25px;
+  }
+  .hamburger-icon {
+    height: 18px; 
+    width: 22px;
+  }
+  #hero-name {
+    font-size: 1.8rem; 
+  }
+  .hero-text-p1 {
+    font-size: 14px;
+  }
+  .hero-text-p2 {
+    font-size: 11px;
+  }
+
+  .hero-contents {
+    transform: translateY(-5%); 
+    padding: 0 0.5rem;
+  }
+
+
+
+  .project-card {
+    min-width: 200px; 
+    padding: 1rem;
+  }
+
+  .scroll-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+} */

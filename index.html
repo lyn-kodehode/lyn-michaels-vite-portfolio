@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/LM-logo-final.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyn Michaels - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!---------------------- NAV DESKTOP ---------------------->
+    <nav id="nav-desktop">
+      <div class="logo-initials">
+        <span class="logo-short">LM</span>
+        <span class="logo-full">LYN MICHAELS</span>
+      </div>
+      <div>
+        <ul class="nav-desktop-links">
+          <li>
+            <a href="#hero-section">
+              <span data-no>Hjem</span>
+              <span data-en>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about-section">
+              <span data-no>Om meg</span>
+              <span data-en>About me</span>
+            </a>
+          </li>
+          <li>
+            <a href="#skills-section">
+              <span data-no>Ferdigheter</span>
+              <span data-en>Skills</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects-section">
+              <span data-no>Prosjekter</span>
+              <span data-en>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact-section">
+              <span data-no>Kontakt</span>
+              <span data-en>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-controls">
+        <button id="language-toggle" class="control-btn">EN</button>
+        <button id="theme-toggle" class="control-btn">
+          ☾☀︎
+          <!-- 🌙 -->
+          <!-- <img
+            src="/assets/lightmode-day-and-night.png"
+            alt="day and night mode icon"
+          /> -->
+        </button>
+      </div>
+    </nav>
+    <!---------------------- NAV HAMBURGER ---------------------->
+    <nav id="nav-hamburger">
+      <div class="logo-initials">
+        <span class="logo-short">LM</span>
+        <span class="logo-full">LYN MICHAELS</span>
+      </div>
+      <!-- hamburger icons amd links container -->
+      <div class="hamburger-menu">
+        <div class="nav-controls">
+          <button id="language-toggle-mobile" class="control-btn">EN</button>
+          <button id="theme-toggle-mobile" class="control-btn">
+            ☾☀︎
+            <!-- <img
+              src="/assets/lightmode-day-and-night.png"
+              alt="day and night mode icon"
+            /> -->
+          </button>
+        </div>
+        <div class="hamburger-icon">
+          <!-- span: lines of the hamburger menu which serves as the icon -->
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- list bullets are enclosed inside the div while bullets are outside when using ul tag -->
+        <div class="hamburger-links-container">
+          <li>
+            <a class="hamburger-link" href="#hero-section">
+              <span data-no>Hjem</span>
+              <span data-en>Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="hamburger-link" href="#about-section">
+              <span data-no>Om meg</span>
+              <span data-en>About me</span>
+            </a>
+          </li>
+          <li>
+            <a class="hamburger-link" href="#skills-section"
+              ><span data-no>Ferdigheter</span> <span data-en>Skills</span></a
+            >
+          </li>
+          <li>
+            <a class="hamburger-link" href="#projects-section"
+              ><span data-no>Prosjekter</span> <span data-en>Projects</span></a
+            >
+          </li>
+          <li>
+            <a class="hamburger-link" href="#contact-section"
+              ><span data-no>Kontakt</span> <span data-en>Contact</span></a
+            >
+          </li>
+        </div>
+      </div>
+    </nav>
+    <!---------------------- SECTIONS ---------------------->
+    <!---------------------- HERO SECTION ---------------------->
+    <section id="hero-section">
+      <div class="hero-contents">
+        <h1 id="hero-name">LYN MICHAELS</h1>
+        <p class="hero-text-p1">
+          <span data-no>Frontend Utvikler</span>
+          <span data-en>Frontend Developer</span>
+        </p>
+        <p class="hero-text-p2">
+          <span data-no>HTML, CSS og JavaScript Entusiast</span>
+          <span data-en>HTML, CSS, and JavaScript Enthusiast</span>
+        </p>
+        <div class="button-container">
+          <button class="btn" id="download-cv-btn">
+            <span data-no>Last ned CV</span>
+            <span data-en>Download CV</span>
+          </button>
+          <a href="#contact-section"
+            ><button class="btn" id="contact-btn">
+              <span data-no>Ta kontakt</span>
+              <span data-en>Let's connect</span>
+            </button></a
+          >
+        </div>
+      </div>
+    </section>
+    <!---------------------- ABOUT SECTION ---------------------->
+    <section id="about-section">
+      <div class="section-header-container">
+        <p class="section-sup-caption">
+          <span data-no>Bli bedre kjent med</span>
+          <span data-en>Get to Know More</span>
+        </p>
+        <h2 class="section-title">
+          <span data-no>Meg</span>
+          <span data-en>About Me</span>
+        </h2>
+      </div>
+      <div class="section-contents about-contents">
+        <div class="photo-container"></div>
+        <div class="about-me-texts">
+          <p>
+            <span data-no
+              >Hei! Jeg heter <span class="name">Lyn</span> og er en
+              frontend-utvikler som brenner for å bygge nettsteder som folk
+              faktisk liker å bruke.</span
+            >
+            <span data-en
+              >Hi! I'm <span class="name">Lyn</span>, a frontend developer who's
+              passionate about building websites that people actually enjoy
+              using.</span
+            >
+          </p>
+          <p>
+            <span data-no
+              >Med en bachelorgrad i IT og erfaring innen support har jeg lært å
+              tenke både teknisk og fra brukerens perspektiv. Jeg har også bodd
+              i fire forskjellige land, noe som har gitt meg en ganske god
+              forståelse av hvordan folk fra ulik bakgrunn samhandler med
+              teknologi. Når jeg ikke koder, finner du meg lesende manga eller
+              ser på anime - det viser seg at all den visuelle
+              historiefortellingen virkelig hjelper med å tenke gjennom
+              brukerflyter!</span
+            >
+            <span data-en
+              >With a BSc in IT and experience in support, I've learned to think
+              both technically and from the user's perspective. I've also lived
+              in 4 different countries, which has given me a pretty good sense
+              of how people from different backgrounds interact with technology.
+              When I'm not coding, you'll find me reading manga or watching
+              anime—turns out all that visual storytelling really helps with
+              thinking through user flows! Me</span
+            >
+          </p>
+          <p>
+            <span data-no
+              >Akkurat nå jobber jeg med å forbedre ferdighetene mine i HTML,
+              CSS, JavaScript og React gjennom Kodehode. Jeg elsker utfordringen
+              med å ta komplekse problemer og gjøre dem om til enkle, intuitive
+              løsninger.</span
+            >
+            <span data-en
+              >Right now I'm leveling up my skills in HTML, CSS, JavaScript, and
+              React through Kodehode. I love the challenge of taking complex
+              problems and turning them into simple, intuitive solutions.</span
+            >
+          </p>
+          <p>
+            <span data-no
+              >Jeg gleder meg til å bli med i et team som verdsetter nye
+              perspektiver og bryr seg om å skape digitale opplevelser som
+              virkelig hjelper folk.</span
+            >
+            <span data-en
+              >I'm excited to join a team that values fresh perspectives and
+              cares about creating digital experiences that genuinely help
+              people.</span
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <!---------------------- SKILLS SECTION ---------------------->
+    <section id="skills-section">
+      <div class="section-header-container">
+        <p class="section-sup-caption">
+          <span data-no>Tenk på mine</span>
+          <span data-en>Consider my</span>
+        </p>
+        <h2 class="section-title">
+          <span data-no>Ferdigheter</span>
+          <span data-en>Skills</span>
+        </h2>
+      </div>
+      <div class="section-contents skills-contents">
+        <div class="skill">Figma</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Git</div>
+      </div>
+    </section>
+    <!---------------------- PROJECTS SECTION ---------------------->
+    <section id="projects-section">
+      <div class="section-header-container">
+        <p class="section-sup-caption">
+          <span data-no>Sjekk ut mine</span>
+          <span data-en>Check Out my</span>
+        </p>
+        <h2 class="section-title">
+          <span data-no>Prosjekter</span>
+          <span data-en>Projects</span>
+        </h2>
+      </div>
+      <div class="section-contents projects-contents">
+        <button class="scroll-btn scroll-left" id="scroll-left">❮</button>
+        <div class="projects-wrapper">
+          <div class="projects-track">
+            <article class="project-card" id="project-1">
+              <div class="project-image"></div>
+              <div class="project-details">
+                <h3 class="project-title">Lawn Rescue</h3>
+                <p class="project-description">
+                  Pizza ipsum dolor meat lovers buffalo. Parmesan sausage bell
+                  mayo Hawaiian.
+                </p>
+                <div class="project-btns-container">
+                  <a
+                    href="https://github.com/lyn-kodehode/lawn-rescue"
+                    target="_blank"
+                    ><button class="btn github-btn" target="_blank">
+                      GitHub
+                    </button></a
+                  >
+                  <a
+                    href="https://lyn-kodehode.github.io/lawn-rescue/"
+                    target="_blank"
+                    ><button class="btn live-btn" target="_blank">
+                      Live Demo
+                    </button></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="project-card" id="project-2">
+              <div class="project-image"></div>
+              <div class="project-details">
+                <h3 class="project-title">Recipe Manager</h3>
+                <p class="project-description">
+                  Pizza ipsum dolor meat lovers buffalo. Parmesan sausage bell
+                  mayo Hawaiian.
+                </p>
+                <div class="project-btns-container">
+                  <a
+                    href="https://github.com/lyn-kodehode/recipe-manager"
+                    target="_blank"
+                    ><button class="btn github-btn" target="_blank">
+                      GitHub
+                    </button></a
+                  >
+                  <a
+                    href="https://lyn-kodehode.github.io/recipe-manager/"
+                    target="_blank"
+                    ><button class="btn live-btn" target="_blank">
+                      Live Demo
+                    </button></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="project-card" id="project-3">
+              <div class="project-image"></div>
+              <div class="project-details">
+                <h3 class="project-title">Chad the Swimmer</h3>
+                <p class="project-description">
+                  Pizza ipsum dolor meat lovers buffalo. Parmesan sausage bell
+                  mayo Hawaiian.
+                </p>
+                <div class="project-btns-container">
+                  <a
+                    href="https://github.com/lyn-kodehode/just-keep-swimming"
+                    target="_blank"
+                    ><button class="btn github-btn" target="_blank">
+                      GitHub
+                    </button></a
+                  >
+                  <a
+                    href="https://lyn-kodehode.github.io/just-keep-swimming/"
+                    target="_blank"
+                    ><button class="btn live-btn" target="_blank">
+                      Live Demo
+                    </button></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="project-card" id="project-4">
+              <div class="project-image"></div>
+              <div class="project-details">
+                <h3 class="project-title">Tick-Tock-Go!</h3>
+                <p class="project-description">
+                  Pizza ipsum dolor meat lovers buffalo. Parmesan sausage bell
+                  mayo Hawaiian.
+                </p>
+                <div class="project-btns-container">
+                  <a
+                    href="https://github.com/lyn-kodehode/tick-tock-go"
+                    target="_blank"
+                    ><button class="btn github-btn" target="_blank">
+                      GitHub
+                    </button></a
+                  >
+                  <a
+                    href="https://lyn-kodehode.github.io/tick-tock-go/"
+                    target="_blank"
+                    ><button class="btn live-btn" target="_blank">
+                      Live Demo
+                    </button></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="project-card" id="project-5">
+              <div class="project-image"></div>
+              <div class="project-details">
+                <h3 class="project-title">Craftsvilla</h3>
+                <p class="project-description">
+                  Pizza ipsum dolor meat lovers buffalo. Parmesan sausage bell
+                  mayo Hawaiian.
+                </p>
+                <div class="project-btns-container">
+                  <a
+                    href="https://github.com/lyn-kodehode/Craftsvilla-project"
+                    target="_blank"
+                    ><button class="btn github-btn" target="_blank">
+                      GitHub
+                    </button></a
+                  >
+                  <a
+                    href="https://lyn-kodehode.github.io/Craftsvilla-project/"
+                    target="_blank"
+                    ><button class="btn live-btn" target="_blank">
+                      Live Demo
+                    </button></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="scroll-btn scroll-right" id="scroll-right">❯</button>
+      </div>
+    </section>
+    <!---------------------- CONTACT SECTION ---------------------->
+    <section id="contact-section">
+      <div class="section-header-container">
+        <p class="section-sup-caption">
+          <span data-no>La oss ta</span>
+          <span data-en>Let's Get in</span>
+        </p>
+        <h2 class="section-title">
+          <span data-no>Kontakt</span>
+          <span data-en>Contact</span>
+        </h2>
+      </div>
+      <div class="section-contents contact-contents">
+        <div class="linkedin">
+          <a
+            class="linkedin-link"
+            href="https://www.linkedin.com/in/lynmichaels/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </div>
+        <div class="border-div"></div>
+        <div class="email">
+          <a href="mailto:myemail@email.com" target="_blank"
+            >myemail@email.com</a
+          >
+        </div>
+        <div class="border-div"></div>
+        <div class="mobile"><a href="tel:12345678">+47 123 45 678</a></div>
+      </div>
+    </section>
+    <footer>Copyright © 2025 Lyn Michaels. All rights reserved.</footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+`
+<!-- night/day mode -->
+<!-- <a href="https://www.flaticon.com/free-icons/day-and-night" title="day and night icons">Day and night icons created by rizal2109 - Flaticon</a> -->
+<!-- ❮ ›-->
+<!-- ❮ ❯ -->
