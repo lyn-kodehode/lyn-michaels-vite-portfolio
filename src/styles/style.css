@@ -31,7 +31,7 @@ p, other texts
   --lightmode-cv-btn-font-color: #2c2c2c;
   --lightmode-cv-btn-color-hover: #2c2c2c;
   --lightmode-cv-btn-font-color-hover: #f5f5f5;
-  --lightmode-shadow: rgba(0, 0, 0, 0.1);
+  --lightmode-shadow: rgba(0, 0, 0, 0.2);
   --lightmode-shadow-hover: rgba(0, 0, 0, 0.15);
 
   /**************** DARKMODE COLORS ***************/
@@ -50,7 +50,7 @@ p, other texts
   --darkmode-cv-btn-font-color: #e4e4e4;
   --darkmode-cv-btn-color-hover: #e4e4e4;
   --darkmode-cv-btn-font-color-hover: #2c2c2c;
-  --darkmode-shadow: rgba(0, 0, 0, 0.1);
+  --darkmode-shadow: rgba(255, 255, 255, 0.1);
   --darkmode-shadow-hover: rgba(255, 255, 255, 0.15);
 }
 * {
@@ -88,7 +88,8 @@ p {
 }
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--lightmode-shadow);
+  /* box-shadow: 0 4px 12px var(--lightmode-shadow); */
+  box-shadow: 0 4px 8px var(--lightmode-shadow);
   border-color: var(--lightmode-primary-font-color);
 }
 .btn:active {
@@ -551,7 +552,7 @@ a:hover {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px var(--lightmode-shadow-hover);
-  /* box-shadow: 0 8px 35px var(--lightmode-shadow-hover); */
+  /* box-shadow: 0 8px 20px var(--lightmode-shadow-hover); */
   border-color: var(--lightmode-primary-font-color-hover);
 }
 .project-image {
