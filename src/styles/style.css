@@ -51,7 +51,7 @@ p, other texts
   --darkmode-cv-btn-color-hover: #e4e4e4;
   --darkmode-cv-btn-font-color-hover: #2c2c2c;
   --darkmode-shadow: rgba(0, 0, 0, 0.1);
-  --darkmode-shadow-hover: rgba(0, 0, 0, 0.15);
+  --darkmode-shadow-hover: rgba(255, 255, 255, 0.15);
 }
 * {
   margin: 0;
@@ -447,15 +447,15 @@ a:hover {
   font-size: 1.5rem;
   color: var(--lightmode-primary-font-color);
   font-weight: 200;
-  /* transition: all 0.3s ease-in-out; */
-  transition: all 0.3s linear;
+  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s linear; */
   padding: 0 0.75rem;
   /* trying out animation */
   /* opacity: 0;
   transform: translateY(2px);
   animation: fadeInUp 10s linear infinite; */
 }
-.skill:nth-child(1) {
+/* .skill:nth-child(1) {
   animation-delay: 1s;
 }
 .skill:nth-child(2) {
@@ -472,12 +472,11 @@ a:hover {
 }
 .skill:nth-child(6) {
   animation-delay: 8.5s;
-}
+} */
 .skill:hover {
   border-left: 2px solid var(--lightmode-primary-font-color-hover);
   border-right: 2px solid var(--lightmode-primary-font-color-hover);
   color: var(--lightmode-primary-font-color-hover);
-  cursor: pointer;
   transform: scale(1.2);
   font-weight: 400;
 }
@@ -552,6 +551,7 @@ a:hover {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px var(--lightmode-shadow-hover);
+  /* box-shadow: 0 8px 35px var(--lightmode-shadow-hover); */
   border-color: var(--lightmode-primary-font-color-hover);
 }
 .project-image {
@@ -730,6 +730,7 @@ footer {
 [data-no] {
   display: inline;
 }
+
 /**************** KEYFRAMES***************/
 /* @keyframes fadeInUp {
   0% {
