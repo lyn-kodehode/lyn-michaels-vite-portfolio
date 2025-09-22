@@ -103,11 +103,23 @@
     height: 300px;
     flex-shrink: 0;
     overflow-y: auto;
+    /* scrollbar-color: var(--lightmode-primary-font-color) transparent; */
+    /* scrollbar-color: var(--lightmode-bg-color) transparent; */
+    /* scrollbar-width: thin; */
+    scrollbar-width: none;
+    transition: all 0.3s ease;
+  }
+  /* Hide scrollbar by default */
+  .about-me-texts::-webkit-scrollbar {
+    /* width: 3px; */
+    width: 0px;
+    background: transparent;
+    transition: width 0.3s ease;
+  }
+  /* Show scrollbar on hover */
+  .about-me-texts:hover {
     scrollbar-width: thin;
     scrollbar-color: var(--lightmode-primary-font-color) transparent;
-  }
-  .about-me-texts::-webkit-scrollbar {
-    width: 3px;
   }
   .about-me-texts::-webkit-scrollbar-track {
     background: transparent;
@@ -283,11 +295,20 @@
     height: 300px;
     flex-shrink: 0;
     overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--lightmode-primary-font-color) transparent;
+    /* scrollbar-width: thin; */
+    scrollbar-width: none;
+    transition: all 0.3s ease;
   }
   .about-me-texts::-webkit-scrollbar {
-    width: 3px;
+    /* width: 3px; */
+    width: 0px;
+    background: transparent;
+    transition: width 0.3s ease;
+  }
+  /* Show scrollbar on hover */
+  .about-me-texts:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--lightmode-primary-font-color) transparent;
   }
   .about-me-texts::-webkit-scrollbar-track {
     background: transparent;

@@ -20,19 +20,13 @@ const heroSection = document.getElementById("hero-section");
 const leftScrollBtn = document.getElementById("scroll-left");
 const rightScrollBtn = document.getElementById("scroll-right");
 const projectsWrapper = document.querySelector(".projects-wrapper");
-const projectsTrack = document.querySelector(".projects-track");
-const computedStyleProjectsTrack = getComputedStyle(projectsTrack);
-const gapProjectsTrack = parseFloat(computedStyleProjectsTrack.gap);
-const projectCardWidth = document.querySelector(".project-card").offsetWidth;
-// const scrollDistance = projectCardWidth + gapProjectsTrack;
-
 const body = document.body;
 
 // --------------------------------------------------------------------------
 // TOGGLE FUNCTIONS
 // --------------------------------------------------------------------------
 
-//auto-hide nav bar
+//auto-hide nav bar when scrolling down
 let lastScrollTop = 0;
 window.addEventListener("scroll", () => {
   const scrollTop = window.pageYOffset;
@@ -200,8 +194,6 @@ rightScrollBtn.addEventListener("click", () => {
   }
 
   projectsWrapper.scrollBy({
-    // left: 300,
-    // left: projectCardWidth,
     left: scrollDistance,
     behavior: "smooth",
   });
