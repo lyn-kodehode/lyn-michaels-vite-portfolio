@@ -71,23 +71,12 @@ const updateScrollButtons = () => {
   }
 };
 
-// const updateThemeIcons = () => {
-//   if (themeToggle) {
-//     themeToggle.textContent = icon;
-//   }
-//   if (themeToggleMobile) {
-//     themeToggleMobile.textContent = icon;
-//   }
-// };
-
 const toggleTheme = () => {
   body.classList.toggle("dark-mode");
   if (body.classList.contains("dark-mode")) {
     localStorage.setItem("theme", "dark");
-    // updateThemeIcons('');
   } else {
     localStorage.setItem("theme", "light");
-    // updateThemeIcons('');
   }
 };
 
@@ -118,11 +107,20 @@ if (currentLanguage === "en") {
   updateLanguageButton("NO");
 }
 
-// CHECKS FOR SAVED THEME PREFERENCE OR DEFAULTS TO LIGHTMODE
-const currentTheme = localStorage.getItem("theme") || "light";
+// CHECKS FOR SAVED THEME PREFERENCE OR SYSTEM PREFERENCE OR DEFAULTS TO LIGHTMODE
+const getSystemTheme = () => {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    return "dark";
+  }
+  return "light";
+};
+
+const currentTheme = localStorage.getItem("theme") || getSystemTheme();
 if (currentTheme === "dark") {
   body.classList.add("dark-mode");
-  // updateThemeIcons('');
 }
 
 const toggleMenu = () => {
@@ -133,6 +131,21 @@ const toggleMenu = () => {
 // --------------------------------------------------------------------------
 // EVENT LISTENERS
 // --------------------------------------------------------------------------
+// real-time listens to system changes (light/dark theme)
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (event) => {
+    // only updates if user did not toggle the portfolio theme manually
+    // checks if localStorage theme exists
+    if (!localStorage.getItem("theme")) {
+      if (event.matches) {
+        body.classList.add("dark-mode");
+      } else {
+        body.classList.remove("dark-mode");
+      }
+    }
+  });
+
 // theme toggle
 if (themeToggle) {
   themeToggle.addEventListener("click", toggleTheme);
@@ -170,9 +183,12 @@ leftScrollBtn.addEventListener("click", () => {
   let scrollDistance;
 
   if (screenWidth < 768) {
-    scrollDistance = 255;
+    scrollDistance = 280;
+  } else if (screenWidth < 1024) {
+    scrollDistance = 290;
   } else {
     scrollDistance = projectsWrapper.clientWidth * 0.8;
+    // scrollDistance = 300;
   }
 
   projectsWrapper.scrollBy({
@@ -188,9 +204,12 @@ rightScrollBtn.addEventListener("click", () => {
   let scrollDistance;
 
   if (screenWidth < 768) {
-    scrollDistance = 255;
+    scrollDistance = 280;
+  } else if (screenWidth < 1024) {
+    scrollDistance = 290;
   } else {
     scrollDistance = projectsWrapper.clientWidth * 0.8;
+    // scrollDistance = 300;
   }
 
   projectsWrapper.scrollBy({
