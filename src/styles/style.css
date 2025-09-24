@@ -440,7 +440,10 @@ a:hover {
   /* height: 100vh; */
   min-height: 100vh;
   box-sizing: border-box;
-  min-height: fit-content;
+  /* min-height: fit-content; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .skill {
   font-family: var(--secondary-font-type);
@@ -462,7 +465,8 @@ a:hover {
   /* justify-content: space-evenly; */
   justify-content: center;
   gap: 2.5vw;
-  padding-bottom: 20vh;
+  /* padding-bottom: 30vh; */
+  align-items: center;
 }
 /**************** PROJECTS SECTION ***************/
 #projects-section {
