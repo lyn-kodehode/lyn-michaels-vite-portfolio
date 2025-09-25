@@ -179,41 +179,25 @@ window.addEventListener("scroll", () => {
 
 // horizontal scrolling
 leftScrollBtn.addEventListener("click", () => {
-  const screenWidth = window.innerWidth;
-  let scrollDistance;
-
-  if (screenWidth < 768) {
-    scrollDistance = 280;
-  } else if (screenWidth < 1024) {
-    scrollDistance = 290;
-  } else {
-    scrollDistance = projectsWrapper.clientWidth * 0.8;
-    // scrollDistance = 300;
-  }
+  const card = document.querySelector(".project-card");
+  // offsetwidth = gets rendered width from clamp()
+  const cardWidth = card.offsetWidth;
 
   projectsWrapper.scrollBy({
     // left: -300,
     // left: -projectCardWidth,
-    left: -scrollDistance,
+    left: -cardWidth,
     behavior: "smooth",
   });
 });
 
 rightScrollBtn.addEventListener("click", () => {
-  const screenWidth = window.innerWidth;
-  let scrollDistance;
-
-  if (screenWidth < 768) {
-    scrollDistance = 280;
-  } else if (screenWidth < 1024) {
-    scrollDistance = 290;
-  } else {
-    scrollDistance = projectsWrapper.clientWidth * 0.8;
-    // scrollDistance = 300;
-  }
+  const card = document.querySelector(".project-card");
+  // offsetwidth = gets rendered width from clamp()
+  const cardWidth = card.offsetWidth;
 
   projectsWrapper.scrollBy({
-    left: scrollDistance,
+    left: cardWidth,
     behavior: "smooth",
   });
 });

@@ -7,6 +7,7 @@
 
 /* 1. MOBILE STYLES  */
 /* 0px-767px */
+/* @media screen and (min-width: 531px) and (max-width: 767px) { */
 @media screen and (max-width: 767px) {
   #nav-desktop {
     display: none;
@@ -160,15 +161,19 @@
   }
 
   /* Projects mobile styles */
-  .projects-contents {
+  /* .projects-contents {
     gap: 1rem;
     padding: 0 1rem;
-  }
+  } */
   .project-card {
+    width: clamp(215px, 20vw, 280px);
+    /* aspect-ratio: 280/370; */
+    height: clamp(284px, 25vw, 370px);
+  }
+  /* .project-card {
     width: 280px;
     height: 370px;
-    /* width: 250px; */
-  }
+  } */
   .project-details {
     padding: 0.8rem;
     gap: 0.5rem;
@@ -180,9 +185,14 @@
   }
   .project-card .project-description {
     /* font-size: 0.85rem; */
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
     padding: 0 0.8rem;
     /* line-height: 1.3; */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .project-btns-container {
     gap: 0.5rem;
@@ -311,10 +321,15 @@
   }
   /* Projects */
   .project-card {
-    min-width: 290px;
-    height: 385px;
+    width: clamp(280px, 15vw, 300px);
+    height: clamp(370px, 20vw, 400px);
     /* padding: 1.5rem; */
   }
+  /* .project-card {
+    min-width: 290px;
+    height: 385px;
+  } */
+
   .project-card .project-title {
     font-size: 1.4rem;
   }
